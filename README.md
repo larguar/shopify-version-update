@@ -2,6 +2,7 @@
 1. assets/style.css.liquid
 2. assets/script.js.liquid
 3. snippets/footer-paper.liquid
+4. sections/maker-list.liquid
 
 
 ## Files to Update
@@ -201,7 +202,7 @@ Search for `<div class="footer-bottom"` and replace contents inside of `<div cla
 
 :page_facing_up: **Sections ▸ Home page ▸ Footer group**
 
-Update the Content section of the ★★★★★ block to:
+Update the Content section of the `★★★★★` block to:
 ```
 <div class="ssw-html-widget ssw-reviews-badge-widget" data-module="recommendation" data-name="ReviewsBadge"></div>
 <div class="review-text">
@@ -210,6 +211,27 @@ Update the Content section of the ★★★★★ block to:
 </div>
 ```
 
+:page_facing_up: **Sections ▸ Collections ▸ makers**
+
+Add a `Maker List` section above `Product grid` and update Heading to:
+```
+{% assign count = 0 %}
+{% for collection in collections %}
+{% unless collection.metafields.custom.makers == blank %}
+{% assign count = count | plus: 1 %}
+{% endunless %}
+{% endfor %}
+{{ count }} Makers
+```
+
+Update additional settings:
+| Section | Update |
+| :--- | :--- |
+| Subheading | “+ counting” |
+| Heading size | Large |
+| Show link to collection page | false |
+| Media aspect ratio | Tall (5:6) |
+| Decrease top margin | true |
 
 ## Additional Steps
 1. [Shopify Image Hover](https://github.com/larguar/shopify-image-hover)
