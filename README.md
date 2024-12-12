@@ -195,3 +195,25 @@ Search for `<div class="footer-bottom"` and replace contents inside of `<div cla
 </div>
 {% comment %} [LG] End Footer Copyright Section {% endcomment %}
 ```
+
+
+## Customize
+
+:page_facing_up: **Sections ▸ Home page ▸ Footer group**
+
+Update the Content section of the ★★★★★ block to:
+```
+<div class="ssw-html-widget ssw-reviews-badge-widget" data-module="recommendation" data-name="ReviewsBadge"></div>
+<div class="review-text">
+<p>5.0 Star Rating based on <span id="review-count">400+</span> Reviews</p>
+<p><a href="/pages/reviews">All Reviews</a></p>
+</div>
+```
+
+
+## Additional Steps
+1. [Shopify Image Hover](https://github.com/larguar/shopify-image-hover)
+2. [Shopify Clickable Mega Menu Links](https://github.com/larguar/shopify-clickable-links)
+3. [Shopify Short Titles](https://github.com/larguar/shopify-short-titles)
+4. [Shopify Product Badges](https://github.com/larguar/shopify-badges)
+5. [Shopify Custom Sold Out Button Text](https://github.com/larguar/shopify-sold-out-button)
