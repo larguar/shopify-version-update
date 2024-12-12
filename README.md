@@ -1,3 +1,13 @@
+## Files to Create/Copy
+1. assets/style.css.liquid
+2. assets/script.js.liquid
+3. snippets/footer-paper.liquid
+
+
+## Files to Update
+1. layout/theme.liquid
+
+
 ## Code
 
 :file_folder: **layout/theme.liquid**
