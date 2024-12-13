@@ -13,6 +13,7 @@
 5. sections/header.liquid
 6. sections/footer.liquid
 7. sections/main-product.liquid
+8. snippets/product-item.liquid
 
 
 ## Code
@@ -217,6 +218,13 @@ Search for `{%- when 'vendor' -%}` and update all contents to:
   {%- endif -%}
 {%- endfor -%}
 {% comment %} [LG] End Vendor Collection Link {% endcomment %}
+```
+
+:file_folder: **snippets/product-item.liquid**
+
+Search for `<div id="product-item-{{ product.id }}"` and add to classes (keep a space between the if statement and previous classes):
+```
+ {% if product.available == false -%}out{%- endif %} {% if product.has_only_default_variant == false -%}variants{%- endif %}
 ```
 
 
