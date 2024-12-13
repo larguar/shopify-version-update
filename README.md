@@ -12,6 +12,7 @@
 4. snippets/theme-symbols.liquid
 5. sections/header.liquid
 6. sections/footer.liquid
+7. sections/main-product.liquid
 
 
 ## Code
@@ -195,6 +196,27 @@ Search for `<div class="footer-bottom"` and replace contents inside of `<div cla
   </ul>
 </div>
 {% comment %} [LG] End Footer Copyright Section {% endcomment %}
+```
+
+:file_folder: **sections/main-product.liquid**
+
+Search for `{%- when 'custom_liquid' -%}` and remove `<div>`:
+```
+{%- when 'custom_liquid' -%}
+    {{ block.settings.custom_liquid }}
+```
+
+Search for `{%- when 'vendor' -%}` and update all contents to:
+```
+{% comment %} [LG] Vendor Collection Link {% endcomment %}
+{%- for collection in collections -%}
+  {%- if collection.title == product.vendor -%}
+    <span class="product__subtitle rte" {{ block.shopify_attributes }}>
+      {{- collection.title | link_to: collection.url }}
+    </span>
+  {%- endif -%}
+{%- endfor -%}
+{% comment %} [LG] End Vendor Collection Link {% endcomment %}
 ```
 
 
